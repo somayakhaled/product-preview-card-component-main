@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap');
+
+$Dark_cyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+
+$Very_dark_blue: hsl(212, 21%, 14%);
+$Dark_grayish_blue: hsl(228, 12%, 48%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $Cream;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 40px;
+
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: white;
+
+        .pro{
+            width: 100%;
+            height: 280px;
+            background-image: url(images/image-product-mobile.jpg);
+            background-size: cover;
+        }
+        
+
+        .infoContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px;
+
+            h3{
+                color: $Dark_grayish_blue;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+        
+            h1{
+                font-family: "Fraunces", serif;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                font-style: normal;
+                font-variation-settings:
+                  "SOFT" 0,
+                  "WONK" 0;
+                  color: $Very_dark_blue;
+            }
+        
+            p{
+                color: $Dark_grayish_blue;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+            label:nth-child(1){
+                color: $Dark_cyan;
+                font-family: "Fraunces", serif;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                font-style: normal;
+                font-variation-settings:
+                  "SOFT" 0,
+                  "WONK" 0;
+                  font-size: xx-large;
+                  margin-right: 20px;
+            }
+
+            label:nth-child(2){
+                position: absolute;
+                color: $Dark_grayish_blue;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 14px;
+                color: $Dark_grayish_blue;
+                margin-top: 11px;
+            }
+
+            button{
+                border: none;
+                border-radius: 8px;
+                background-color: $Dark_cyan;
+                color: white;
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 16px;
+                padding: 15px;
+                cursor: pointer;
+                transition: all 0.6 ease-in-out;
+
+                &:hover{
+                    background-color: hsl(157, 36%, 17%);
+                }
+
+                img{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px){
+        .mainContainer{
+            flex-direction: row;
+            margin-left: 40px;
+            margin-right: 40px;
+
+            .pro{
+                width: 50%;
+                height: 400px;
+                background-image: url(images/image-product-desktop.jpg);
+                background-size: cover;
+            }
+        }
+
+        .infoContainer{
+            width: 50%;
+            padding-top: 30px;
+        }
+    }
+
+    @media (min-width: 1024px){
+        .mainContainer{
+            flex-direction: row;
+            margin-left: 170px;
+            margin-right: 170px;
+
+            .pro{
+                width: 50%;
+                height: 400px;
+                background-image: url(images/image-product-desktop.jpg);
+                background-size: cover;
+            }
+        }
+
+        .infoContainer{
+            width: 50%;
+            padding-top: 30px;
+        }
+    }
+
+    @media (min-width: 1440px){
+        .mainContainer{
+            flex-direction: row;
+            margin-left: 400px;
+            margin-right: 400px;
+
+            .pro{
+                width: 50%;
+                height: 400px;
+                background-image: url(images/image-product-desktop.jpg);
+                background-size: cover;
+            }
+        }
+
+        .infoContainer{
+            width: 50%;
+            padding-top: 30px;
+        }
+    }
+}
+
